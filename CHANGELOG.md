@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/CloudAstro/terraform-opentelekomcloud-elastic-loadbalancer/compare/v1.0.0...v1.1.0) (2026-06-17)
+
+
+### Features
+
+* bump tf and provider versions and handle sensitive data ([a03568f](https://github.com/CloudAstro/terraform-opentelekomcloud-elastic-loadbalancer/commit/a03568ff35bca548e2f62e17f267c9f67b2c5310))
+
 ## 1.0.0 (2025-09-09)
 
 
