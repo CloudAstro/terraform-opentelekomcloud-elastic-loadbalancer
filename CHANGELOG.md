@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/CloudAstro/terraform-opentelekomcloud-elastic-loadbalancer/compare/v1.0.0...v2.0.0) (2026-06-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* handle sensitive values under tf 1.10+ and bump version constraints ([#3](https://github.com/CloudAstro/terraform-opentelekomcloud-elastic-loadbalancer/issues/3))
+
+### Bug Fixes
+
+* handle sensitive values under tf 1.10+ and bump version constraints ([#3](https://github.com/CloudAstro/terraform-opentelekomcloud-elastic-loadbalancer/issues/3)) ([2cf8d87](https://github.com/CloudAstro/terraform-opentelekomcloud-elastic-loadbalancer/commit/2cf8d8766e9d449d7fb7a94666ba75e67f3d2c5b))
+
 ## 1.0.0 (2025-09-09)
 
 
