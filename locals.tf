@@ -1,31 +1,37 @@
 locals {
-  listener_cert_server = merge([
+  _cert_server_ids = merge([
     for key, value in var.listeners :
     value.certificates != null ? {
       for cert_key, cert_value in value.certificates :
-      key => cert_value
+      key => cert_key
       if cert_value.type == "server" && cert_value.domain == null
     } : {}
   ]...)
 
-  listener_cert_client = merge([
+  _cert_client_ids = merge([
     for key, value in var.listeners :
     value.certificates != null ? {
       for cert_key, cert_value in value.certificates :
-      key => cert_value
+      key => cert_key
       if cert_value.type == "client"
     } : {}
   ]...)
 
-  listener_cert_sni = merge([
+  _cert_sni_ids = merge([
     for key, value in var.listeners :
     value.certificates != null ? {
       for cert_key, cert_value in value.certificates :
-      "${key}_${cert_key}" => cert_value
+      "${key}_${cert_key}" => {
+        listener_key = key
+        cert_key     = cert_key
+      }
       if cert_value.domain != null
     } : {}
   ]...)
 
+  listener_cert_server = try(nonsensitive(local._cert_server_ids), local._cert_server_ids)
+  listener_cert_client = try(nonsensitive(local._cert_client_ids), local._cert_client_ids)
+  listener_cert_sni    = try(nonsensitive(local._cert_sni_ids), local._cert_sni_ids)
 }
 
 locals {
