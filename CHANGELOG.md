@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/CloudAstro/terraform-opentelekomcloud-elastic-loadbalancer/compare/v1.1.0...v1.1.1) (2026-06-18)
+
+
+### Bug Fixes
+
+* repoint module for registry release ([1fa746c](https://github.com/CloudAstro/terraform-opentelekomcloud-elastic-loadbalancer/commit/1fa746c59350de087668a5fb72bd972943f83143))
+
 ## [1.1.0](https://github.com/CloudAstro/terraform-opentelekomcloud-elastic-loadbalancer/compare/v1.0.0...v1.1.0) (2026-06-17)
 
 
